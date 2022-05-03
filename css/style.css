@@ -1,0 +1,175 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: #eee;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font: 30px/35px Tahoma, sans-serif;
+  margin: 30px;
+  text-align: center;
+}
+
+a {
+  color: #000;
+}
+
+.bg-color {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.tabs {
+  font: 11px/15px Tahoma, sans-serif;
+}
+.tabs ul {
+  display: flex;
+  border-bottom: 1px solid #000;
+}
+.tabs li {
+  display: block;
+  color: #000;
+  position: relative;
+}
+.tabs li a {
+  display: block;
+  padding: 10px 25px;
+}
+.tabs li:before {
+  top: 8px;
+  left: 4px;
+  position: absolute;
+  font-size: 20px;
+}
+.tabs li:nth-child(1):before {
+  content: "ଦ";
+}
+.tabs li:nth-child(2):before {
+  content: "❧";
+}
+.tabs li:nth-child(3):before {
+  content: "ⓚ";
+}
+.tabs li:nth-child(4):before {
+  content: "✺";
+}
+.tabs li:hover a {
+  opacity: 0.5;
+}
+.tabs li.active {
+  border-top: 3px solid red;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  margin: 0 -3px -1px;
+  border-bottom: 1px solid #fff;
+}
+.tabs-body {
+  padding: 10px;
+}
+
+.tabs-content {
+  display: none;
+}
+.tabs-content.active {
+  display: block;
+}
+
+/* media queries */
+@media (max-width: 700px) {
+  .tabs li {
+    flex: 1;
+  }
+  .tabs li:before {
+    top: 8px;
+    left: 50%;
+    margin: 0 0 0 -8px;
+  }
+  .tabs li.active:last-child {
+    border-right: none;
+  }
+  .tabs li.active:first-child {
+    border-left: none;
+  }
+  .tabs a {
+    font-size: 0px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

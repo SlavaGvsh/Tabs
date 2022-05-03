@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabs 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive CSS Tabs</h1>
+       <div class="bg-color">
+           <nav class="tabs">
+               <ul>
+                   <li class="active"><a href="#codepen">Codepen</a></li>
+                   <li><a href="#dribbble">Dribbble</a></li>
+                   <li><a href="#dropbox">Dropbox</a></li>
+                   <li><a href="#drupal">Drupal</a></li>
+               </ul>
+           </nav>
+           <div class="tabs-body">
+               <div class="tabs-content active" id="codepen">CONTENT FIR TAB 1</div>
+               <div class="tabs-content" id="dribbble">CONTENT FIR TAB 2</div>
+               <div class="tabs-content" id="dropbox">CONTENT FIR TAB 3</div>
+               <div class="tabs-content" id="drupal">CONTENT FIR TAB 4</div>
+           </div>
+       </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.tabs a').click(function() {
+
+                // Check for active
+                $('.tabs li').removeClass('active');
+                $(this).parent().addClass('active');
+
+                // Display active tab
+                let currentTab = $(this).attr('href');
+                $('.tabs-content').removeClass('active');
+                $(currentTab).addClass('active');
+
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
